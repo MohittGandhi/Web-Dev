@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        height: 100%;
+      }
+      .card {
+        background: linear-gradient(135deg, #8a2be2, #4169e1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+      .photo {
+        height: 300px;
+        width: 300px;
+        border-radius: 12px;
+        object-fit: fill;
+      }
+      h1 {
+        background: linear-gradient(135deg, #ff416c, #ff4b2b, #f9d423);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: center;
+      }
+
+      .button {
+        display: flex;
+        justify-content: space-around;
+        height: 30px;
+      }
+      .buybutton {
+        width: 100px;
+        background-color: #4169e1;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.9s ease-in-out;
+        border: #333 solid 1px;
+        border-radius: 5px;
+      }
+      .buybutton:hover {
+        background-color: #8a2be2;
+      }
+      .add-to-cart-button {
+        width: 100px;
+        background-color: #8a2be2;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.9s ease-in-out;
+        border: #333 solid 1px;
+        border-radius: 5px;
+      }
+
+      .add-to-cart-button:hover {
+        background-color: #4169e1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div>
+        <img class="photo" src="../images/image.png" alt="photo" />
+        <h1>Nike Men Court</h1>
+        <div class="button">
+          <button class="buybutton">Buy</button>
+          <button class="add-to-cart-button">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
