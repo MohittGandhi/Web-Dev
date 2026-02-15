@@ -116,3 +116,6 @@ class Employee{
 let mohit = new Employee("Mohit",30404);
 console.log(mohit.salary);
 mohit.salary = 9000;
+
+
+
