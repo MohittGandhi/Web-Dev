@@ -58,7 +58,7 @@ class Coffeemachine{
 let coffeegrey = new Coffeemachine();
 console.log(coffeegrey.pressstartbutton());
 
-/* polymorspism -that can take multiple forms .in this example method name is same but returns completely different things.just like one name many forms.*/
+/* polymorphism -that can take multiple forms .in this example method name is same but returns completely different things.just like one name many forms.*/
 
 class bird{
     fly(){

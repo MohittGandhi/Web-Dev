@@ -1,5 +1,19 @@
 //example 1
 //dom manipulation consist of geting the elements and event listening.
+document.getElementById("changeTextButton").addEventListener(
+  "click",
+  () => {
+    console.log(this);
+  },);
+  document.getElementById("changeTextButton").addEventListener(
+  "click",
+  function(){
+    console.log(this);
+  },
+);
+  // arrow function directs to global"this"
+  // if simple function is used it directs to local "this"
+
 document
   .getElementById("changeTextButton")
   .addEventListener("click", function () {
@@ -10,7 +24,7 @@ document
 // arrow function directs to global"this"
 // if simple function is used it directs to local "this"
 //example 2
-
+//treversing a dom 
 document
   .getElementById("highlightFirstCity")
   .addEventListener("click", function () {
@@ -28,6 +42,7 @@ document.getElementById("changeOrder").addEventListener("click", function () {
 });
 
 //example 4
+//create element
 document.getElementById("addNewItem").addEventListener("click", function () {
   let newItem = document.createElement("li");
   newItem.textContent = "Eggs";
@@ -60,6 +75,7 @@ document.getElementById("teaList").addEventListener("click", function (event) {
 });
 
 //example 8
+//form handeling
 
 document
   .getElementById("feedbackForm")
