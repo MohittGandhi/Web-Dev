@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+
   function addToCart(product){
     cart.push(product);
     renderCart();
@@ -46,12 +47,29 @@ document.addEventListener("DOMContentLoaded", () => {
         const cartItem = document.createElement('div')
         cartItem.innerHTML = `
         ${items.name} -$ ${items.price}
-        `;
+        <button  data-index=${index}>Remove ${index}</button>
+        `
         cartItems.appendChild(cartItem);
         totalPriceDisplay.textContent = `${totalPrice.toFixed(2)}`;
       })
     }else{
       emptyCartMessage.classList.remove("hidden");
+      totalPriceDisplay.textContent = `0.00`
     }
   }
+
+  cartItems.addEventListener("click", (e) => {
+    if (e.target.tagName === "BUTTON") {
+      const index = parseInt(e.target.getAttribute("data-index"));
+      cart.splice(index, 1);
+      renderCart();
+    }
+  });
+  
+
+  checkOutBtn.addEventListener('click', (()=>{
+    cart.length = 0
+    alert("checkOut succesfully");
+    renderCart();
+  }))
 });
